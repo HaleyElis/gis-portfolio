@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Missed Connections: a GIS and cartography project exploring passenger rail access in North Carolina by Haley Meyrowitz.">
+  <title>Missed Connections | Haley Meyrowitz</title>
+
+  <style>
+    :root {
+      --blue: #6DA5B4;
+      --teal: #264348;
+      --ivory: #FBF8F4;
+      --burgundy: #843D50;
+      --pale: #E5EFF1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--teal);
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--burgundy);
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--burgundy);
+      outline-offset: 5px;
+    }
+
+    .wrap {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 24px 0;
+    }
+
+    header { border-bottom: 1px solid var(--blue); }
+
+    .name {
+      color: var(--teal);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .intro { padding: 65px 0 40px; }
+
+    .eyebrow {
+      color: var(--burgundy);
+      font-size: .85rem;
+      font-weight: bold;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      margin: 18px 0;
+      letter-spacing: -.03em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    .lead {
+      max-width: 740px;
+      font-size: 1.2rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .tags span {
+      background: var(--pale);
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: .9rem;
+    }
+
+    figure { margin: 0; }
+
+    .map {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      font-size: .9rem;
+    }
+
+    .content {
+      max-width: 780px;
+      padding: 55px 0;
+    }
+
+    .content section { margin-bottom: 45px; }
+
+    .submission {
+      background: var(--pale);
+      padding: 24px;
+      border-left: 5px solid var(--burgundy);
+    }
+
+    footer {
+      background: var(--teal);
+      color: var(--ivory);
+      padding: 28px 0;
+      margin-top: 25px;
+    }
+
+    footer a { color: var(--ivory); }
+
+    @media (max-width: 600px) {
+      .intro { padding-top: 40px; }
+      .submission { padding: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="name" href="index.html">Haley Meyrowitz</a>
+      <a href="index.html#projects">All projects</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="intro" aria-labelledby="project-title">
+      <div class="eyebrow">Cartography · Transportation · North Carolina</div>
+
+      <h1 id="project-title">Missed Connections</h1>
+
+      <p class="lead">
+        Exploring the geography of passenger rail access in
+        North Carolina: where Amtrak connects communities
+        and where gaps remain.
+      </p>
+
+      <div class="tags" aria-label="Project tools and topics">
+        <span>ArcGIS Pro</span>
+        <span>Spatial analysis</span>
+        <span>Cartographic design</span>
+        <span>2026</span>
+      </div>
+    </section>
+
+    <figure>
+      <a href="Meyrowitz_Haley_ConnectingNC.jpg">
+        <img
+          class="map"
+          src="Meyrowitz_Haley_ConnectingNC.jpg"
+          alt="Missed Connections, a map by Haley Meyrowitz examining Amtrak service and gaps in passenger rail station access in North Carolina.">
+      </a>
+
+      <figcaption>
+        Map by Haley Meyrowitz.
+        <a href="Meyrowitz_Haley_ConnectingNC.jpg">
+          Open the full-resolution map
+        </a>.
+      </figcaption>
+    </figure>
+
+    <div class="content">
+      <section aria-labelledby="overview">
+        <h2 id="overview">The question</h2>
+        <p>
+          A rail route passing through a region does not necessarily
+          mean that nearby residents can board a train. This project
+          explores the relationship between Amtrak’s network and
+          the locations where passengers can access it in
+          North Carolina.
+        </p>
+        <p>
+          The map considers both the connections provided by
+          existing service and the geographic gaps between
+          communities and passenger stations.
+        </p>
+      </section>
+
+      <section aria-labelledby="approach">
+        <h2 id="approach">Mapping approach</h2>
+        <p>
+          I used ArcGIS Pro to bring together passenger rail routes,
+          station locations, and geographic context. The statewide
+          map highlights North Carolina’s rail geography, while
+          a national inset places these connections within the
+          broader Amtrak network.
+        </p>
+        <p>
+          The layout uses a coordinated color palette and a clear
+          visual hierarchy to distinguish the rail network,
+          station access, and surrounding geography.
+          Data sources and the map projection are documented
+          in the map credits.
+        </p>
+      </section>
+
+      <section aria-labelledby="interpretation">
+        <h2 id="interpretation">Reading the map</h2>
+        <p>
+          Passenger rail access depends on where stations are
+          located, not simply on where tracks or routes run.
+          Gaps in station access help reveal places where the
+          presence of a rail corridor may not translate into
+          a convenient opportunity to use passenger rail.
+        </p>
+        <p>
+          This map focuses on geographic access. It does not
+          establish that every destination on the national
+          network is reachable by a direct train from
+          North Carolina, or measure service frequency,
+          fares, or door-to-door travel time.
+        </p>
+      </section>
+
+      <section class="submission" aria-labelledby="gis-day">
+        <h2 id="gis-day">UNC GIS Day 2026</h2>
+        <p>
+          I submitted <em>Missed Connections</em> to the
+          2026 UNC GIS Day Map Competition at UNC–Chapel Hill.
+        </p>
+        <a href="https://geography.unc.edu/2026/11/19/unc-geography-and-environment-celebrates-gis-day-2026-with-map-competition/">
+          Read about the GIS Day event and map competition
+        </a>
+      </section>
+
+      <a href="index.html#projects">Return to all projects</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Haley Meyrowitz · GIS Portfolio ·
+      <a href="https://sites.google.com/view/haleymeyrowitz/home">
+        Professional website
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
