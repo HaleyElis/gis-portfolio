@@ -3,20 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="GIS, cartography, and remote sensing portfolio by Haley Meyrowitz.">
+
+  <meta
+    name="description"
+    content="GIS, cartography, and remote sensing portfolio by Haley Meyrowitz.">
+
   <title>Haley Meyrowitz | GIS Portfolio</title>
+
   <style>
     :root {
-      --blue: #6DA5B4;
+      --sea-glass: #7FA39B;
       --teal: #264348;
       --ivory: #FBF8F4;
-      --burgundy: #843D50;
-      --pale: #E5EFF1;
+      --purple: #59346B;
+      --pale: #E6EFEB;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: var(--ivory);
@@ -25,22 +35,43 @@
       font-size: 17px;
       line-height: 1.7;
     }
-    a { color: var(--burgundy); text-underline-offset: 4px; }
-    a:hover { text-decoration-thickness: 2px; }
+
+    a {
+      color: var(--purple);
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
     a:focus-visible {
-      outline: 3px solid var(--burgundy);
+      outline: 3px solid var(--purple);
       outline-offset: 5px;
     }
-    .wrap { width: min(1100px, 88%); margin: auto; }
+
+    .wrap {
+      width: min(1100px, 88%);
+      margin: auto;
+    }
+
     .skip {
       position: absolute;
       left: 16px;
       top: -100px;
       padding: 12px;
       background: var(--ivory);
+      z-index: 10;
     }
-    .skip:focus { top: 16px; }
-    header { border-bottom: 1px solid var(--blue); }
+
+    .skip:focus {
+      top: 16px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--sea-glass);
+    }
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -49,104 +80,199 @@
       padding: 24px 0;
       flex-wrap: wrap;
     }
+
     .name {
       color: var(--teal);
       font-weight: bold;
       text-decoration: none;
       letter-spacing: .03em;
     }
-    .nav-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .nav-links a { color: var(--teal); }
-    .hero { padding: 90px 0 80px; max-width: 850px; }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--teal);
+    }
+
+    .hero {
+      padding: 90px 0 80px;
+      max-width: 850px;
+    }
+
     .eyebrow {
-      color: var(--burgundy);
+      color: var(--purple);
       font-size: .85rem;
       font-weight: bold;
       letter-spacing: .14em;
       text-transform: uppercase;
     }
-    h1, h2, h3 {
+
+    h1,
+    h2,
+    h3 {
       font-family: Georgia, serif;
       font-weight: normal;
       line-height: 1.15;
     }
+
     h1 {
       font-size: clamp(2.8rem, 7vw, 5.5rem);
       margin: 20px 0 28px;
       letter-spacing: -.04em;
     }
-    h2 { font-size: 2.4rem; margin: 0 0 20px; }
-    h3 { font-size: 1.65rem; margin: 14px 0; }
-    .hero p { max-width: 650px; font-size: 1.15rem; }
+
+    h2 {
+      font-size: 2.4rem;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      font-size: 1.65rem;
+      margin: 14px 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.15rem;
+    }
+
     .button {
       display: inline-block;
       margin-top: 16px;
       padding: 12px 22px;
-      background: var(--burgundy);
+      background: var(--purple);
       color: var(--ivory);
       border-radius: 4px;
       text-decoration: none;
     }
-    .button:hover { background: var(--teal); }
-    .projects { padding: 65px 0; background: var(--pale); }
-    .section-intro { max-width: 650px; margin-bottom: 36px; }
+
+    .button:hover {
+      background: var(--teal);
+    }
+
+    .projects {
+      padding: 65px 0;
+      background: var(--pale);
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin-bottom: 36px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
     }
+
     .card {
       background: var(--ivory);
       padding: 32px;
-      border-top: 5px solid var(--blue);
+      border-top: 5px solid var(--sea-glass);
       border-radius: 4px;
     }
+
     .category {
       font-size: .85rem;
-      color: var(--burgundy);
+      color: var(--purple);
       font-weight: bold;
     }
-    .card p { margin-bottom: 20px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .card p {
+      margin-bottom: 20px;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .project-image--portrait {
+      height: 260px;
+      object-fit: contain;
+      background: var(--pale);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
     .tags span {
       background: var(--pale);
       padding: 4px 10px;
       border-radius: 3px;
       font-size: .85rem;
     }
-    .about { padding: 75px 0; max-width: 760px; }
+
+    .about {
+      padding: 75px 0;
+      max-width: 760px;
+    }
+
     footer {
       background: var(--teal);
       color: var(--ivory);
       padding: 32px 0;
     }
-    footer a { color: var(--ivory); }
+
+    footer a {
+      color: var(--ivory);
+    }
+
     footer .wrap {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
     }
+
     @media (max-width: 700px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero { padding: 60px 0; }
-      .card { padding: 24px; }
-      .nav-links { gap: 16px; }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header>
     <nav class="wrap" aria-label="Main navigation">
       <a class="name" href="./">Haley Meyrowitz</a>
+
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+
         <a href="https://sites.google.com/view/haleymeyrowitz/home">
           Professional website
         </a>
@@ -157,37 +283,59 @@
   <main id="main">
     <div class="wrap">
       <section class="hero" aria-labelledby="intro-heading">
-        <div class="eyebrow">GIS · Cartography · Remote Sensing</div>
-        <h1 id="intro-heading">Exploring places.<br>Communicating patterns.</h1>
+        <div class="eyebrow">
+          GIS · Cartography · Remote Sensing
+        </div>
+
+        <h1 id="intro-heading">
+          Exploring places.<br>
+          Communicating patterns.
+        </h1>
+
         <p>
           I’m Haley, a geoscientist and graduate student at
           UNC–Chapel Hill. I use spatial analysis and thoughtful
           map design to investigate landscapes, examine access,
           and make geographic information easier to understand.
         </p>
-        <a class="button" href="#projects">Explore my projects</a>
+
+        <a class="button" href="#projects">
+          Explore my projects
+        </a>
       </section>
     </div>
 
-    <section class="projects" id="projects" aria-labelledby="projects-heading">
+    <section
+      class="projects"
+      id="projects"
+      aria-labelledby="projects-heading">
+
       <div class="wrap">
         <h2 id="projects-heading">Selected work</h2>
+
         <p class="section-intro">
-          Projects spanning transportation accessibility,
-          environmental analysis, terrain, and cartographic design.
-          Detailed project pages are being added.
+          Projects exploring transportation access, trail proximity,
+          regional geography, and cartographic design.
         </p>
 
         <div class="grid">
+
+          <!-- IBX -->
           <article class="card">
-            <div class="category">Transportation accessibility</div>
+            <div class="category">
+              Transportation accessibility
+            </div>
+
             <h3>Connecting Brooklyn and Queens</h3>
+
             <p class="category">Coming soon</p>
+
             <p>
               Investigating how the proposed Interborough Express
               could expand walking access to rail stations, using
               network service areas and census population data.
             </p>
+
             <div class="tags" aria-label="Methods and tools">
               <span>ArcGIS Pro</span>
               <span>Network analysis</span>
@@ -195,128 +343,166 @@
             </div>
           </article>
 
+          <!-- Missed Connections -->
           <article class="card">
-  <div class="category">Cartography · Rail access</div>
-  <h3>
-  <a href="missed-connections.html">Missed Connections</a>
-</h3>
+            <div class="category">
+              Cartography · Rail access
+            </div>
 
-  <a href="Meyrowitz_Haley_ConnectingNC.jpg"
-     aria-label="View the full-size Missed Connections map">
-    <img
-      src="Meyrowitz_Haley_ConnectingNC.jpg"
-      alt="Missed Connections: a map exploring Amtrak service and gaps in station access in North Carolina."
-      loading="lazy"
-      style="display:block; width:100%; height:auto; margin:20px 0; border-radius:4px;">
-  </a>
+            <h3>
+              <a href="missed-connections.html">
+                Missed Connections
+              </a>
+            </h3>
 
-  <p>
-    Exploring passenger rail access in North Carolina through
-    a map of Amtrak service and geographic gaps in station access.
-  </p>
+            <a
+              href="Meyrowitz_Haley_ConnectingNC.jpg"
+              aria-label="View the full-size Missed Connections map">
 
-  <p>
-    Submitted to the
-    <a href="https://geography.unc.edu/2026/11/19/unc-geography-and-environment-celebrates-gis-day-2026-with-map-competition/">
-      2026 UNC GIS Day Map Competition
-    </a>
-    at UNC–Chapel Hill.
-  </p>
+              <img
+                class="project-image"
+                src="Meyrowitz_Haley_ConnectingNC.jpg"
+                alt="Missed Connections: a map exploring Amtrak service and gaps in station access in North Carolina."
+                loading="lazy">
+            </a>
 
-  <div class="tags" aria-label="Methods and tools">
-    <span>ArcGIS Pro</span>
-    <span>Spatial analysis</span>
-    <span>Map design</span>
-  </div>
+            <p>
+              Exploring passenger rail access in North Carolina
+              through a map of Amtrak service and geographic
+              gaps in station access.
+            </p>
+
+            <p>
+              Submitted to the
+              <a href="https://geography.unc.edu/2026/11/19/unc-geography-and-environment-celebrates-gis-day-2026-with-map-competition/">
+                2026 UNC GIS Day Map Competition
+              </a>
+              at UNC–Chapel Hill.
+            </p>
+
+            <div class="tags" aria-label="Methods and tools">
+              <span>ArcGIS Pro</span>
+              <span>Spatial analysis</span>
+              <span>Map design</span>
+            </div>
+
             <a class="button" href="missed-connections.html">
-  View project
-</a>
-<article class="card">
-  <div class="category">Spatial analysis · Infographic design</div>
+              View project
+            </a>
+          </article>
 
-  <h3>
-    <a href="portland-trails.html">
-      Mapping Trail Proximity in Portland
-    </a>
-  </h3>
-
-  <a href="portland-trails.html">
-    <img
-      src="Portland_info.jpg"
-      alt="Portland trail proximity infographic with a regional map, summary statistics, and county comparisons."
-      loading="lazy"
-      style="display:block; width:100%; height:260px; object-fit:contain; background:#E5EFF1; margin:20px 0; border-radius:4px;">
-  </a>
-
-  <p>
-    Measuring land within half a mile of existing trails
-    in Portland’s Tri-Metro region and comparing patterns
-    across three counties.
-  </p>
-
-  <div class="tags" aria-label="Methods and tools">
-    <span>ArcGIS Pro</span>
-    <span>Buffer analysis</span>
-    <span>Data visualization</span>
-  </div>
-
-  <a class="button" href="portland-trails.html">View project</a>
-</article>
-
+          <!-- Portland Trail Proximity -->
           <article class="card">
-  <div class="category">Cartography · Regional mapping</div>
+            <div class="category">
+              Spatial analysis · Infographic design
+            </div>
 
-  <h3>
-    <a href="north-fork.html">Exploring the North Fork</a>
-  </h3>
+            <h3>
+              <a href="portland-trails.html">
+                Mapping Trail Proximity in Portland
+              </a>
+            </h3>
 
-  <a href="north-fork.html">
-    <img
-      src="NorthFork.jpg"
-      alt="Preview of Haley Meyrowitz’s North Fork regional map."
-      loading="lazy"
-      style="display:block; width:100%; height:auto; margin:20px 0; border-radius:4px;">
-  </a>
+            <a href="portland-trails.html">
+              <img
+                class="project-image project-image--portrait"
+                src="Portland_info.jpg"
+                alt="Portland trail proximity infographic with a regional map, summary statistics, and county comparisons."
+                loading="lazy">
+            </a>
 
-  <p>
-    Bringing together destinations, transportation,
-    terrain, and soils to explore the geography
-    of Long Island’s North Fork.
-  </p>
+            <p>
+              Measuring land within half a mile of existing trails
+              in Portland’s Tri-Metro region and comparing
+              patterns across three counties.
+            </p>
 
-  <div class="tags" aria-label="Methods and tools">
-    <span>ArcGIS Pro</span>
-    <span>Data integration</span>
-    <span>Cartographic design</span>
-  </div>
+            <div class="tags" aria-label="Methods and tools">
+              <span>ArcGIS Pro</span>
+              <span>Buffer analysis</span>
+              <span>Data visualization</span>
+            </div>
 
-  <a class="button" href="north-fork.html">View project</a>
-</article>
+            <a class="button" href="portland-trails.html">
+              View project
+            </a>
+          </article>
+
+          <!-- North Fork -->
+          <article class="card">
+            <div class="category">
+              Cartography · Regional mapping
+            </div>
+
+            <h3>
+              <a href="north-fork.html">
+                Exploring the North Fork
+              </a>
+            </h3>
+
+            <a href="north-fork.html">
+              <img
+                class="project-image"
+                src="NorthFork.jpg"
+                alt="Preview of Haley Meyrowitz’s North Fork regional map."
+                loading="lazy">
+            </a>
+
+            <p>
+              Bringing together destinations, transportation,
+              terrain, and soils to explore the geography
+              of Long Island’s North Fork.
+            </p>
+
+            <div class="tags" aria-label="Methods and tools">
+              <span>ArcGIS Pro</span>
+              <span>Data integration</span>
+              <span>Cartographic design</span>
+            </div>
+
+            <a class="button" href="north-fork.html">
+              View project
+            </a>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <section class="about wrap" id="about" aria-labelledby="about-heading">
+    <section
+      class="about wrap"
+      id="about"
+      aria-labelledby="about-heading">
+
       <div class="eyebrow">Behind the maps</div>
-      <h2 id="about-heading">Geoscience meets spatial analysis.</h2>
+
+      <h2 id="about-heading">
+        Geoscience meets spatial analysis.
+      </h2>
+
       <p>
         My background combines field geology, environmental
         consulting, research, and teaching. I am pursuing an
         M.S. in Earth, Marine and Environmental Sciences and a
         Graduate Certificate in GIS at UNC–Chapel Hill.
       </p>
+
       <p>
         This portfolio brings together work from William &amp; Mary
         and UNC–Chapel Hill, with an emphasis on clear methods,
         readable maps, and interpretations grounded in evidence.
       </p>
-      <a href="https://github.com/HaleyElis">Find my work on GitHub</a>
+
+      <a href="https://github.com/HaleyElis">
+        Find my work on GitHub
+      </a>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
       <span>Haley Meyrowitz · GIS Portfolio</span>
+
       <a href="https://sites.google.com/view/haleymeyrowitz/home">
         Visit my professional website
       </a>
