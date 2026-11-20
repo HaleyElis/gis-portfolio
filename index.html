@@ -284,6 +284,33 @@
         scroll-behavior: auto;
       }
     }
+    <style>
+  /* Your existing styles */
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 36px;
+    align-items: start;
+  }
+
+  .headshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .headshot {
+      max-width: 220px;
+    }
+  }
   </style>
 </head>
 
@@ -528,31 +555,6 @@
   </div>
 </section>
   </main>
-
-  .about-layout {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 36px;
-  align-items: start;
-}
-
-.headshot {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-@media (max-width: 600px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .headshot {
-    max-width: 220px;
-  }
-}
   
   <footer>
     <div class="wrap">
