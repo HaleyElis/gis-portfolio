@@ -219,6 +219,31 @@
       max-width: 760px;
     }
 
+    .about-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.headshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .headshot {
+    max-width: 220px;
+  }
+}
+
     footer {
       background: var(--teal);
       color: var(--ivory);
@@ -470,16 +495,24 @@
     </section>
 
     <section
-      class="about wrap"
-      id="about"
-      aria-labelledby="about-heading">
+  class="about wrap"
+  id="about"
+  aria-labelledby="about-heading">
 
-      <div class="eyebrow">Behind the maps</div>
+  <div class="eyebrow">Behind the maps</div>
 
-      <h2 id="about-heading">
-        Geoscience meets spatial analysis.
-      </h2>
+  <h2 id="about-heading">
+    Geoscience meets spatial analysis.
+  </h2>
 
+  <div class="about-layout">
+    <img
+      class="headshot"
+      src="MeyrowitzHaley_GSA_Headshot1.png"
+      alt="Portrait of Haley Meyrowitz"
+      loading="lazy">
+
+    <div>
       <p>
         My background combines field geology, environmental
         consulting, research, and teaching. I am pursuing an
@@ -496,9 +529,36 @@
       <a href="https://github.com/HaleyElis">
         Find my work on GitHub
       </a>
-    </section>
+    </div>
+  </div>
+</section>
   </main>
 
+  .about-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.headshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .headshot {
+    max-width: 220px;
+  }
+}
+  
   <footer>
     <div class="wrap">
       <span>Haley Meyrowitz · GIS Portfolio</span>
